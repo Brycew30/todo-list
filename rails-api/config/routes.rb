@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get '/lists' => 'lists#index'
+  get '/lists/:item_name' => 'lists#show'
+  post '/lists' => 'lists#create'
+  get '/items' => 'items#index'
 end
