@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get '/lists/:item_name' => 'lists#show'
   post '/lists' => 'lists#create'
   get '/items' => 'items#index'
+  get '/items/:id' => 'items#show'
 end
