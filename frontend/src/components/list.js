@@ -22,8 +22,11 @@ class List {
     const ul = document.createElement('ul')
     for (let item of this.items) {
       let li = document.createElement('li')
+      let box = document.createElement("input")
+      box.setAttribute("type", "checkbox")
       li.innerHTML = item
       ul.appendChild(li)
+      li.appendChild(box)
     }
     cardInfo.appendChild(ul)
     const footer = document.createElement('div')
