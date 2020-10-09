@@ -33,9 +33,9 @@
 
 #main-title {
   text-align: center;
-  color: #e8e8e8;
+  color: #143D59;
   font-size: 2.5em;
-  text-shadow: 3px 2px #143D59;
+  font-family: "Arial", Helvetica, sans-serif;
 }
 
 #list-card-container {
