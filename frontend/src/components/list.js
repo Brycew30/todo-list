@@ -33,7 +33,7 @@ class List {
     footer.className = "card-footer"
     const link = document.createElement('a')
     link.href = this.listLink
-    link.innerHTML = "Click For More Info"
+    link.innerHTML = "More Info"
     footer.appendChild(link)
     card.appendChild(cardInfo)
     card.appendChild(footer)

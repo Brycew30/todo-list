@@ -120,8 +120,7 @@ input[type=submit] {
 .card-footer a {
   color: #002e8a;
   font-family: helvetica;
-  text-decoration: none;
-  text-transform: uppercase;
+  text-decoration: underline;
 }
 
 .card-footer a:hover {
