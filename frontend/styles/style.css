@@ -2,8 +2,7 @@
 .card {
   position: relative;
   box-shadow: 4px 4px 8px 0 #143D59;
-  transition: 0.3s;
-  width: 32%;
+  width: 25%;
   margin-top: 20px;
   font-family: "Times New Roman", Times, serif;
 }
@@ -15,14 +14,12 @@
 .card-info h1 {
   color: #143D59;
   text-align: center;
-  /* text-shadow: 1px 1px #002e8a; */
   padding-bottom: 5px;
-  border-bottom: 1px solid grey;
 }
 
 .card-info ul {
-  list-style-type: circle;
-  padding: 10px;
+  list-style-type: upper-roman;
+  padding: 20px;
 }
 
 .card-info ul li {
