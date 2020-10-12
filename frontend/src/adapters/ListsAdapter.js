@@ -10,7 +10,7 @@ class ListsAdapter {
       .then(response => response.json())
       .catch(error => console.log("Error: " + error))
   }
-  getListByItem(item) {
-    return fetch(this.baseURL + `/${item}`).then(response => response.json())
+  getListByItem(list) {
+    return fetch(this.baseURL + `/${list}`).then(response => response.json())
   }
 }
