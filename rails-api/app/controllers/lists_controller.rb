@@ -5,8 +5,8 @@ class ListsController < ApplicationController
   end
 
   def show
-    lists = Item.find_by(name: params[:item_name]).lists
-    render json: ListSerializer.new(lists.sample)
+    list = List.find_by(name: params[:title])
+    render json: ListSerializer.new(list)
   end
 
   def create
