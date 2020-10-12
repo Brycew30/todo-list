@@ -1,18 +1,18 @@
-class Items {
+class MenuDropDown {
   constructor() {
-    this.adapter = new ItemsAdapter()
+    this.adapter = new ListsAdapter()
     this.itemDropDown = document.getElementById("filter-dropdown")
     this.fetchAndPopulateDropDown()
   }
   fetchAndPopulateDropDown() {
-    this.adapter.getItems().then(json => this.populateItemDropDown(json))
+    this.adapter.getLists().then(json => this.populateListDropDown(json))
   }
-  populateItemDropDown(data) {
-    data.sort((a, b) => (a.attributes.name > b.attributes.name) ? 1 : -1)
-    for (let item of data) {
+  populateListDropDown(data) {
+    data.sort((a, b) => (a.attributes.title > b.attributes.title) ? 1 : -1)
+    for (let list of data) {
       let option = document.createElement("option")
-      option.value = item.attributes.name
-      option.innerHTML = item.attributes.name
+      option.value = list.attributes.title
+      option.innerHTML = list.attributes.title
       this.itemDropDown.appendChild(option)
     }
   }
