@@ -94,6 +94,7 @@ class Lists {
   clearLists() {
     this.cardContainer.innerHTML = ""
   }
+  // bottom 2 functions causing the problem, I believe
   getAndLoadListByName() {
     this.clearLists()
     const list = event.target.value
