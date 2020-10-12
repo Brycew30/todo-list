@@ -28,7 +28,7 @@ class Lists {
       this.toggleButtons()
     }.bind(this))
     this.itemDropDown.addEventListener("change", function() {
-      this.getAndLoadRandomListByItem()
+      this.getAndLoadListByName()
     }.bind(this))
   }
   createArrayOfListItems(items) {
@@ -89,17 +89,18 @@ class Lists {
   toggleDropDown() {
     const dropDown = document.getElementById("filter-drop-down")
     this.hideOrShowElement(dropDown)
-    new Items()
+    new MenuDropDown()
   }
   clearLists() {
     this.cardContainer.innerHTML = ""
   }
-  getAndLoadRandomListByItem() {
+  getAndLoadListByName() {
     this.clearLists()
-    const item = event.target.value
-    this.adapter.getListByItem(item).then(json => this.loadRandomList(json.data.attributes))
+    const list = event.target.value
+    this.adapter.getListByItem(list).then(json => this.loadList(json.data.attributes))
+    debugger
   }
-  loadRandomList(list) {
+  loadList(list) {
     let items = this.createArrayOfListItems(list.items)
     const l = new List(list.title, list.image_link, list.list_link, items)
     l.createListCard()
